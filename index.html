@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <header>
-        <nav>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLanguage = navigator.language || navigator.userLanguage;
 
-        </nav>
-    </header>
-    <main>
-        
-    </main>
-    <footer>
-        
-    </footer>
-</body>
+        if (userLanguage.startsWith("pl")) {
+          window.location.href = "pl";
+        } else {
+          window.location.href = "en";
+        }
+      });
+    </script>
+  </body>
 </html>
