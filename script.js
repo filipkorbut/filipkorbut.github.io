@@ -4,16 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     langElements.forEach(function(langElement) {
         langElement.addEventListener("click", function() {
             const lang = this.getAttribute("data-lang");
-            window.location.href = lang;
+            window.location.href = lang + ".html";
         });
     });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const userLanguage = navigator.language || navigator.userLanguage;
-
-    if (userLanguage.startsWith('pl')) {
-        window.location.href = 'pl';
-    } else {
-        window.location.href = 'en';
-    }
 });
