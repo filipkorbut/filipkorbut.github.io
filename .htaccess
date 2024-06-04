@@ -1,8 +1,13 @@
-RewriteEngine on
+RewriteEngine On
 
+# Przekierowanie z /index.html na /
+RewriteCond %{THE_REQUEST} \s/index\.html [NC]
+RewriteRule ^ / [R=301,L]
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
+# Przekierowanie z /pl.html na /pl
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,R=301,L]
 
+# Usunięcie rozszerzenia .html z adresów URL
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
