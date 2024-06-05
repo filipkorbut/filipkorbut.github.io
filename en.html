@@ -24,10 +24,10 @@
             </div>
           </li>
 
-          <li><a href="#Contact">Contact</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Contact">Home</a></li>
+          <li><a href="#contact" onclick="navigate(event, 'contact')">Contact</a></li>
+          <li><a href="#projects" onclick="navigate(event, 'projects')">Projects</a></li>
+          <li><a href="#about" onclick="navigate(event, 'about')">About</a></li>
+          <li><a href="#home" onclick="navigate(event, 'home')">Home</a></li>
 
           <div class="right">
             <li>
@@ -41,7 +41,7 @@
     </header>
     <main>
       <!-- Content here -->
-      <section cla ss="welcome-page">
+      <section class="welcome-page" id="home">
         <div class="banner">
           <div>
             <h1>
@@ -54,7 +54,7 @@
             </h1>
             
             <div class="btn">
-              <a href="#About"><b>About me</b></a>
+              <a href="#about" onclick="navigate(event, 'about')"><b>About me</b></a>
             </div>
           </div>
          
@@ -63,11 +63,32 @@
           </div>
         </div>
       </section>
+
+      <section class="about" id="about">
+        <section class="tech-stack hidden">
+          <h1>My Experience</h1>
+          <p>Technologies I've been working with so far</p>
+
+          <div class="tech-stack-items">
+            <ul>
+              <li><img src="Images/csharp.svg" alt="csharp"></li>
+              <li><img src="Images/cpp.svg" alt="cpp"></li>
+              <li><img src="Images/java.svg" alt="java"></li>
+              <li><img src="Images/unity.svg" alt="unity"></li>
+              <li><img src="Images/html.svg" alt="html"></li>
+              <li><img src="Images/css.svg" alt="css"></li>
+              <li><img src="Images/js.svg" alt="js"></li>
+              <li><img src="Images/php.svg" alt="php"></li>
+            </ul>
+          </div>
+
+        </section>
+      </section>      
     </main>
     <footer>
       <!-- Footer content here -->
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
