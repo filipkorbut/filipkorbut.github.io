@@ -24,10 +24,11 @@
             </div>
           </li>
 
-          <li><a href="#Contact">Kontakt</a></li>
-          <li><a href="#Projects">Projekty</a></li>
-          <li><a href="#About">O mnie</a></li>
-          <li><a href="#Contact">Home</a></li>
+          <li><a href="#contact" onclick="navigate(event, 'contact')">Kontakt</a></li>
+          <li><a href="#projects" onclick="navigate(event, 'projects')">Projekty</a></li>
+          <li><a href="#about" onclick="navigate(event, 'about')">O mnie</a></li>
+          <li><a href="#home" onclick="navigate(event, 'home')">Home</a></li>
+
 
           <div class="right">
             <li>
@@ -41,7 +42,7 @@
     </header>
     <main>
       <!-- Content here -->
-      <section class="welcome-page">
+      <section class="welcome-page" id="home">
         <div class="banner">
           <div>
             <h1>
@@ -49,11 +50,11 @@
               Mam na imię Filip
               <!--Add some cool effects to the name-->
               <br />
-              Jestem na kierunku programistycznym <br />
+              Jestem w technikum na kierunku programistycznym <br />
               
             </h1>
             <div class="btn">
-              <a href="#About"><b>O mnie</b></a>
+              <a href="#about" onclick="navigate(event, 'about')"><b>O mnie</b></a>
             </div>
           </div>
           
@@ -62,6 +63,26 @@
           </div>
         </div>
       </section>
+      <section class="about" id="about">
+        <section class="tech-stack hidden">
+          <h1>Moje doświadczenie</h1>
+          <p>Technologie, którymi sie dotychczas posługiwałem</p>
+
+          <div class="tech-stack-items">
+            <ul>
+              <li class="hidden"><img src="Images/csharp.svg" alt="csharp"></li>
+              <li class="hidden"><img src="Images/cpp.svg" alt="cpp"></li>
+              <li class="hidden"><img src="Images/java.svg" alt="java"></li>
+              <li class="hidden"><img src="Images/unity.svg" alt="unity"></li>
+              <li class="hidden"><img src="Images/html.svg" alt="html"></li>
+              <li class="hidden"><img src="Images/css.svg" alt="css"></li>
+              <li class="hidden"><img src="Images/js.svg" alt="js"></li>
+              <li class="hidden"><img src="Images/php.svg" alt="php"></li>
+            </ul>
+          </div>
+
+        </section>
+      </section>    
     </main>
     <footer>
       <!-- Footer content here -->
