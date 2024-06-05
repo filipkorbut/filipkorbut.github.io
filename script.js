@@ -27,11 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     const section = document.getElementById(sectionId.toLowerCase()); 
     section.scrollIntoView({ behavior: "smooth" });
-    history.pushState(null, "", "#" + sectionId.toLowerCase()); 
   
-    // Sprawdzenie, czy sectionId to 'about', jeśli tak, usuń ten fragment z adresu URL
-    if (sectionId.toLowerCase() === 'about') {
-      history.replaceState(null, "", window.location.pathname); // Usunięcie fragmentu z adresu URL
-    }
+    // Usuń cały anchor z adresu URL
+    history.pushState(null, "", window.location.pathname);
   }
+  
+  
   
