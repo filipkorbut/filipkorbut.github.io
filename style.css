@@ -1,12 +1,12 @@
 body {
   font-family: "Poppins", sans-serif;
-  color: #a7a7a7;
+  color: white;
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: #191919;
   margin: 0 auto;
-  max-width: 1200px; 
+  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -23,19 +23,18 @@ li {
 .hidden {
   opacity: 0;
   transition: opacity 1s ease-out;
- 
 }
-@media(prefers-reduced-motion){
-  .hidden{
+@media (prefers-reduced-motion) {
+  .hidden {
     transition: none;
   }
 }
 .show {
   opacity: 1;
-
 }
 
 .navbar {
+  color: #a7a7a7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,6 +93,13 @@ li {
   font-size: 36px;
   line-height: 1.5;
 }
+.banner h1 .name {
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 
 @media screen and (max-width: 768px) {
   .navbar {
@@ -120,9 +126,12 @@ li {
 }
 .banner img {
   animation: fade-in 1.5s ease-out forwards;
+  max-width: 100%; /* Ustawienie maksymalnej szerokości obrazka */
+  height: auto; /* Automatyczne skalowanie wysokości w zależności od szerokości */
   padding-right: 0;
   padding-left: 100px;
 }
+
 .btn {
   animation: fade-in 1.5s ease-out forwards;
   display: flex;
@@ -186,4 +195,3 @@ li {
   width: 90px;
   height: auto;
 }
-  
