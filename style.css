@@ -89,10 +89,7 @@ li {
   align-items: flex-start;
 }
 
-.banner h1 {
-  font-size: 36px;
-  line-height: 1.5;
-}
+
 .banner h1 .name {
   background: linear-gradient(to right, #ff8a00, #e52e71);
   -webkit-background-clip: text;
@@ -159,24 +156,24 @@ li {
 }
 
 .tech-stack h1 {
-  font-size: 45px;
+  font-size: 40px;
   margin: 30px;
 }
 
 .tech-stack p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .tech-stack-items {
-  margin: 80px;
+  margin: 60px;
   display: flex;
   justify-content: center;
 }
 
 .tech-stack-items ul {
-  width: 700px;
+  width: 600px;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
@@ -192,6 +189,25 @@ li {
 }
 
 .tech-stack-items img {
-  width: 90px;
+  width: 70px;
   height: auto;
+}
+
+.bio{
+  margin-top: 100px;
+}
+.bio .chart h1{
+  font-size: 25px;
+}
+.bio p{
+  font-size: 18px;
+}
+.bio ul{
+  list-style-type: disc;
+}
+.bio li{
+  font-size: 18px;
+}
+.chart{
+  text-align: center;
 }
