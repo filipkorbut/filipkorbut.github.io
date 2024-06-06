@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
-
     <title>Filip Korbut</title>
   </head>
   <body>
@@ -31,7 +30,6 @@
           <li><a href="#about" onclick="navigate(event, 'about')">O mnie</a></li>
           <li><a href="#home" onclick="navigate(event, 'home')">Home</a></li>
 
-
           <div class="right">
             <li>
               <a href="https://github.com/filipkorbut"
@@ -43,50 +41,80 @@
       </nav>
     </header>
     <main>
-      <!-- Content here -->
-      <section class="welcome-page">
+      <section class="welcome-page" >
         <div class="banner">
           <div>
             <h1>
-              Cześć &#128075, <br />
+              Cześć <span class="wave">&#128075;</span>, <br />
               Mam na imię <span class="name">Filip</span>
-              <br />  
+              <br />
               Jestem w technikum na kierunku programistycznym <br />
-              
             </h1>
+            
+            
             <div class="btn">
-              <a href="#about" onclick="navigate(event, 'about')"><b>O mnie</b></a>
+              <a href="#about" onclick="navigate(event, 'about')"><b>O mnie</b> </a>
             </div>
           </div>
-          
+         
           <div>
             <img src="Images/portret.png" alt="photo" />
           </div>
         </div>
       </section>
+
       <section class="about" id="about">
         <section class="tech-stack hidden">
-          <h1>Moje doświadczenie</h1>
-          <p>Technologie, którymi się dotychczas posługiwałem</p>
-
-          <div class="tech-stack-items">
+          <h1 class="hidden">Moje doświadczenie</h1>
+          <p class="hidden">Technologie, którymi się dotychczas posługiwałem</p>
+        
+          <div class="tech-stack-items hidden">
             <ul>
-              <li class="hidden"><img src="Images/csharp.svg" alt="csharp"></li>
-              <li class="hidden"><img src="Images/cpp.svg" alt="cpp"></li>
-              <li class="hidden"><img src="Images/java.svg" alt="java"></li>
-              <li class="hidden"><img src="Images/unity.svg" alt="unity"></li>
-              <li class="hidden"><img src="Images/html.svg" alt="html"></li>
-              <li class="hidden"><img src="Images/css.svg" alt="css"></li>
-              <li class="hidden"><img src="Images/js.svg" alt="js"></li>
-              <li class="hidden"><img src="Images/php.svg" alt="php"></li>
+              <li><img src="Images/csharp.svg" alt="csharp"></li>
+              <li><img src="Images/cpp.svg" alt="cpp"></li>
+              <li><img src="Images/java.svg" alt="java"></li>
+              <li><img src="Images/unity.svg" alt="unity"></li>
+              <li><img src="Images/html.svg" alt="html"></li>
+              <li><img src="Images/css.svg" alt="css"></li>
+              <li><img src="Images/js.svg" alt="js"></li>
+              <li><img src="Images/php.svg" alt="php"></li>
+
             </ul>
           </div>
-
         </section>
-      </section>    
+        
+        <section class="bio">
+          <h1 class="jump hidden-jump">Hey there!</h1>
+          <div class="slide-left">
+            <p>Mam na imię Filip Korbut. Mam 16 lat i uczęszczam do Technikum komunikacyjnego nr 25 w Krakowie na kierunku <br>technik-programista. Jestem w 2 klasie.</p>
+            <p>Lubię porządkować wszystkie notatki z lekcji oraz projekty na moim Google Drive i Githubie.</p>
+            <p>W wolnym czasie lubię chodzić na siłownie i powoli wkręcam się w bouldering. </p>
+
+            <p><strong>Fun facts:</strong></p>
+          </div>
+            <ul>
+              <li class="slide-left">Wyciskam 110kg na płaskiej</li>
+              <li class="slide-left">Moim ulubionym serialem jest Breaking Bad</li>
+              <li class="slide-left">Próbuje przejść Terraria Calamity mod</li>
+            </ul>
+          
+          <div class="chart hidden">
+            <p><strong>Tutaj jest mój Github contribution chart:</strong></p>
+            <img src="http://ghchart.rshah.org/filipkorbut" alt="filipkorbut's Github chart" />
+          </div>
+        </section>
+      </section>      
     </main>
     <footer>
-      <!-- Footer content here -->
+      <section class="footer-upper">
+        <ul>
+        <li class="footer-left-element"><img src="Images/favicon.ico" alt="logo"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>nothing to see here (yet)</li>
+        </ul>
+      </section>
     </footer>
 
     <script defer src="script.js"></script>

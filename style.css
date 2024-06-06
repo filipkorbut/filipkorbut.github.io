@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -20,15 +23,61 @@ li {
   list-style: none;
   padding: 20px;
 }
+footer{
+  margin-top: 150px;
+}
 .hidden {
   opacity: 0;
   transition: opacity 1s ease-out;
 }
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
 }
+
+.hidden-jump {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.hidden-jump.animate {
+  animation: jump 1s ease-out 1;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-left.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .show {
   opacity: 1;
 }
@@ -88,7 +137,6 @@ li {
   gap: 20px;
   align-items: flex-start;
 }
-
 
 .banner h1 .name {
   background: linear-gradient(to right, #ff8a00, #e52e71);
@@ -193,22 +241,58 @@ li {
   height: auto;
 }
 
-.bio{
+.bio {
   margin-top: 100px;
 }
-.bio .chart h1{
-  font-size: 25px;
+.bio .chart h1 {
+  font-size: 40px;
 }
-.bio p{
+.bio p {
   font-size: 18px;
 }
-.bio ul{
+.bio ul {
   list-style-type: disc;
 }
-.bio li{
+.bio li {
   font-size: 18px;
 }
-.chart{
+.chart {
   text-align: center;
   margin: 50px;
+}
+
+.footer-upper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center; 
+}
+
+.footer-upper li {
+  display: inline-block; 
+  margin: 0 10px; 
+}
+
+.footer-upper img {
+  width: 70px;
+}
+
+.footer-left-element{
+  float: left;
+}
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2s infinite;
 }
