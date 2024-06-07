@@ -46,15 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const userLanguage = navigator.language || navigator.userLanguage;
     const currentPage = window.location.pathname;
-    const storedLanguage = localStorage.getItem('preferredLanguage');
+    const languageDetected = localStorage.getItem('languageDetected');
 
-    if (storedLanguage) {
-        if (storedLanguage === 'pl' && !currentPage.endsWith('/pl.html')) {
-            window.location.href = 'pl.html';
-        } else if (storedLanguage === 'en' && !currentPage.endsWith('/en.html')) {
-            window.location.href = 'en.html';
-        }
-    } else {
+
+    if (!languageDetected) {
+        localStorage.setItem('languageDetected', 'true');
         if (userLanguage.startsWith('pl') && !currentPage.endsWith('/pl.html')) {
             window.location.href = 'pl.html';
         } else if (!userLanguage.startsWith('pl') && !currentPage.endsWith('/en.html')) {
@@ -67,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
     langElements.forEach(function (langElement) {
         langElement.addEventListener("click", function () {
             const lang = this.getAttribute("data-lang");
-            localStorage.setItem('preferredLanguage', lang);
             window.location.href = lang + ".html";
         });
     });
 });
+
