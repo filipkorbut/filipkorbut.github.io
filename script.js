@@ -42,3 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
   hiddenJump.forEach((el) => observer.observe(el));
   slideLeft.forEach((el) => observer.observe(el));
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const userLanguage = navigator.language || navigator.userLanguage;
+
+    if (userLanguage.startsWith('pl')) {
+        window.location.href = 'pl';
+    } else {
+        window.location.href = 'en';
+    }
+});
