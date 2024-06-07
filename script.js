@@ -45,9 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     const userLanguage = navigator.language || navigator.userLanguage;
 
-    if (userLanguage.startsWith('pl')) {
-        window.location.href = 'pl';
-    } else {
-        window.location.href = 'en';
+    const currentPage = window.location.pathname;
+
+    if (userLanguage.startsWith('pl') && currentPage !== '/pl.html') {
+        window.location.href = 'pl.html';
+    } else if (!userLanguage.startsWith('pl') && currentPage !== '/en.html') {
+        window.location.href = 'en.html';
     }
 });
