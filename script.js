@@ -43,28 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
     slideLeft.forEach((el) => observer.observe(el));
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const userLanguage = navigator.language || navigator.userLanguage;
-    const currentPage = window.location.pathname;
-    const languageDetected = localStorage.getItem('languageDetected');
-
-
-    if (!languageDetected) {
-        localStorage.setItem('languageDetected', 'true');
-        if (userLanguage.startsWith('pl') && !currentPage.endsWith('/pl.html')) {
-            window.location.href = 'pl.html';
-        } else if (!userLanguage.startsWith('pl') && !currentPage.endsWith('/en.html')) {
-            window.location.href = 'en.html';
-        }
-    }
-
-    const langElements = document.querySelectorAll(".lang");
-
-    langElements.forEach(function (langElement) {
-        langElement.addEventListener("click", function () {
-            const lang = this.getAttribute("data-lang");
-            window.location.href = lang + ".html";
-        });
-    });
-});
-
