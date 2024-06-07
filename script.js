@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   slideLeft.forEach((el) => observer.observe(el));
 });
 document.addEventListener("DOMContentLoaded", function() {
-    const userLanguage = navigator.language || navigator.userLanguage;
+    const userLanguage = navigator.language ||  navigator.userLanguage;
 
     const currentPage = window.location.pathname;
 
