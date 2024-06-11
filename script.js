@@ -48,7 +48,7 @@ var urls = {
     'pl': 'http://filipkorbut.pl/pl',
     'en': 'http://filipkorbut.pl/en',
 };
-var defaultUrl = 'http://filipkorbut.pl/pl';
+var defaultUrl = 'http://filipkorbut.pl/en';
 
 var url = urls[userLang] ?? defaultUrl;
 console.log(url);
