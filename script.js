@@ -43,3 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
     slideLeft.forEach((el) => observer.observe(el));
 });
 
+var userLang = navigator.language || navigator.userLanguage;
+var urls = {
+    'pl': 'http://filipkorbut.pl/pl',
+    'en': 'http://filipkorbut.pl/en',
+};
+var defaultUrl = 'http://filipkorbut.pl/pl';
+
+var url = urls[userLang] ?? defaultUrl;
+console.log(url);
