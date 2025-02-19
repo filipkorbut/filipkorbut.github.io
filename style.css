@@ -1,6 +1,7 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -12,6 +13,7 @@ body {
   max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 1.2em; 
 }
 
 a {
@@ -23,9 +25,11 @@ li {
   list-style: none;
   padding: 20px;
 }
-footer{
+
+footer {
   margin-top: 150px;
 }
+
 .hidden {
   opacity: 0;
   transition: opacity 1s ease-out;
@@ -152,6 +156,7 @@ footer{
     align-items: stretch;
   }
 }
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -162,7 +167,6 @@ footer{
     transform: translateY(0);
   }
 }
-
 .banner h1 {
   font-size: 36px;
   line-height: 1.5;
@@ -171,8 +175,8 @@ footer{
 }
 .banner img {
   animation: fade-in 1.5s ease-out forwards;
-  max-width: 100%; /* Ustawienie maksymalnej szerokości obrazka */
-  height: auto; /* Automatyczne skalowanie wysokości w zależności od szerokości */
+  max-width: 100%; 
+  height: auto; 
   padding-right: 0;
   padding-left: 100px;
 }
@@ -185,13 +189,14 @@ footer{
   text-align: center;
   margin: auto;
   color: black;
-  font-size: large;
+  font-size: 1.1em; 
   background-color: white;
-  width: 140px;
-  height: 50px;
+  width: 160px;
+  height: 60px;
   border-radius: 27px;
   margin-top: 70px;
 }
+
 @media screen and (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -204,12 +209,12 @@ footer{
 }
 
 .tech-stack h1 {
-  font-size: 40px;
+  font-size: 1.3em; 
   margin: 40px;
 }
 
 .tech-stack p {
-  font-size: 20px;
+  font-size: 1.1em;
 }
 
 .tech-stack-items {
@@ -244,51 +249,96 @@ footer{
 .bio {
   margin-top: 100px;
 }
+
 .bio .chart h1 {
-  font-size: 40px;
+  font-size: 1.3em; 
 }
-.bio p {
-  font-size: 18px;
+.bio p{
+  font-size: 1.1em; 
 }
 .bio ul {
   list-style-type: disc;
 }
+
 .bio li {
-  font-size: 18px;
+  font-size: 1.1em; 
 }
+
 .chart {
   text-align: center;
   margin: 50px;
 }
 
+.footer-upper h1 {
+  justify-self: center;
+}
+
 .footer-upper ul {
+  display: flex;
+  justify-content: space-around;
   padding: 0;
-  margin: 0;
   list-style: none;
-  text-align: center; 
+  text-align: center;
 }
 
 .footer-upper li {
-  display: inline-block; 
-  margin: 0 10px; 
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .footer-upper img {
   width: 70px;
 }
 
-.footer-left-element{
+.footer-upper li.social-media {
+  margin: 10px;
+  text-align: center;
+}
+
+.footer-upper li.social-media a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2em; /* Match the footer text size */
+}
+
+.footer-upper li.social-media img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+}
+
+.footer-left-element {
   float: left;
 }
+
 @keyframes wave {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .wave {
